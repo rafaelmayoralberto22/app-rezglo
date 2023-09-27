@@ -1,22 +1,25 @@
 import { Button, Card, Form, Image, Input, Space, message } from "antd";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useStore } from "../../hooks/useGlobalStore";
 import { api } from "../../services/api";
 import { FieldType } from "../../type";
+import { Splash } from "../splash/Splash";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"error" | "warning" | "">("");
-  const changeUser = useStore((store) => store.changeUser);
-  const navigate = useNavigate();
+  const { loadingData, changeUser, setLoadingData } = useStore((store) => ({
+    loadingData: store.loadingData,
+    changeUser: store.changeUser,
+    setLoadingData: store.setLoadingData,
+  }));
 
   const onFinish = async (values: FieldType) => {
     try {
       setLoading(true);
       const user = await api.login(values);
       changeUser(user);
-      navigate("/chat");
+      setLoadingData(true);
     } catch (e: any) {
       if (e.hasOwnProperty("message")) {
         message.error(e.message);
@@ -26,6 +29,8 @@ const LoginForm = () => {
       setLoading(false);
     }
   };
+
+  if (loadingData) return <Splash />;
 
   return (
     <Card bordered={false}>
@@ -60,8 +65,14 @@ const LoginForm = () => {
             <Input.Password status={status} />
           </Form.Item>
 
-          <Form.Item className="login-items mt-4">
-            <Button type="primary" htmlType="submit" loading={loading} block>
+          <Form.Item className="login-items">
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={loading}
+              style={{ background: "#242424", height: 50, marginTop: 10 }}
+              block
+            >
               Login
             </Button>
           </Form.Item>

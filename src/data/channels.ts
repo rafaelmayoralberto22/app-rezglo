@@ -4,6 +4,7 @@ export const mockChannels: Channel[] = [
   {
     id: 1,
     name: "History",
+    users: ["admin", "aalea", "madelrio"],
     history: [
       {
         id: 1,
@@ -34,6 +35,7 @@ export const mockChannels: Channel[] = [
   {
     id: 2,
     name: "MLB",
+    users: ["admin", "aalea", "madelrio"],
     history: [
       {
         id: 1,
@@ -50,14 +52,6 @@ export const mockChannels: Channel[] = [
         timestamp: 1695777675241,
         username: "aalea",
         message: "Hi, Admin",
-      },
-      {
-        id: 3,
-        avatar:
-          "https://api.adorable.io/avatars/400/9da7a3b0aa8603d741759fc61e08c682.png",
-        timestamp: 1695777759373,
-        username: "madelrio",
-        message: "Hi",
       },
     ],
   },

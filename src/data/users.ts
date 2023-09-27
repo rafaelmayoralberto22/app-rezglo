@@ -47,4 +47,16 @@ export const mocksUsers: ChannelUser[] = [
       },
     ],
   },
+  {
+    id: 3,
+    username: "admin",
+    name: "Admin",
+    history: [],
+  },
+  {
+    id: 3,
+    username: "madelrio",
+    name: "Marcelo del Rio",
+    history: [],
+  },
 ];

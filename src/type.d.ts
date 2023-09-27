@@ -18,6 +18,7 @@ export type Message = {
 export type Channel = {
   id: number;
   name: string;
+  users: string[];
   history: Message[];
 };
 
@@ -34,13 +35,18 @@ export type SelectedMessage = {
 };
 
 export type GlobalState = {
+  loadingData: boolean;
   user: User | null;
   channels: Channel[];
   channelsUsers: ChannelUser[];
   selected: SelectedMessage | null;
   changeUser: (user: User | null) => void;
   addChannel: (channel: Channel) => void;
+  setChannels: (channel: Channel[]) => void;
+  setChannelsUsers: (channel: ChannelUser[]) => void;
+  setChannelsAndUsers: (channel: Channel[], channel: ChannelUser[]) => void;
   removeChannel: (id: number) => void;
   onSelected: (select: SelectedMessage) => void;
   addMessage: (text: string) => void;
+  setLoadingData: (loading: boolean) => void;
 };

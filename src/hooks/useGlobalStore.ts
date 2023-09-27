@@ -1,18 +1,31 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { mockChannels } from "../data/channels";
-import { mocksUsers } from "../data/users";
 import { addMensageToChannelOrUser } from "../helpers";
-import { Channel, GlobalState, SelectedMessage, User } from "../type";
+import {
+  Channel,
+  ChannelUser,
+  GlobalState,
+  SelectedMessage,
+  User,
+} from "../type";
 
 export const useStore = create<GlobalState>()(
   persist(
     (set, get) => ({
+      loadingData: false,
       user: null,
-      channels: mockChannels,
-      channelsUsers: mocksUsers,
+      channels: [],
+      channelsUsers: [],
       selected: null,
       changeUser: (user: User | null) => set(() => ({ user })),
+      setLoadingData: (loadingData: boolean) => set(() => ({ loadingData })),
+      setChannels: (channels: Channel[]) => set(() => ({ channels })),
+      setChannelsUsers: (channelsUsers: ChannelUser[]) =>
+        set(() => ({ channelsUsers })),
+      setChannelsAndUsers: (
+        channels: Channel[],
+        channelsUsers: ChannelUser[]
+      ) => set(() => ({ channels, channelsUsers })),
       addChannel: (channel: Channel) =>
         set(({ channels }) => ({ channels: [...channels, channel] })),
       removeChannel: (inte: number) =>

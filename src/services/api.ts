@@ -1,4 +1,6 @@
-import { FieldType, User } from "../type";
+import { mockChannels } from "../data/channels";
+import { mocksUsers } from "../data/users";
+import { Channel, ChannelUser, FieldType, User } from "../type";
 
 export const api = {
   login: async ({ username, password }: FieldType): Promise<User> => {
@@ -17,6 +19,20 @@ export const api = {
           });
         }
       }, 3000);
+    });
+  },
+  loadChannels: async (): Promise<Channel[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(mockChannels);
+      }, 5000);
+    });
+  },
+  loadUsers: async (): Promise<ChannelUser[]> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(mocksUsers);
+      }, 6500);
     });
   },
 };
