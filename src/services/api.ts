@@ -5,7 +5,11 @@ export const api = {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (username === "admin" && password === "admin") {
-          resolve({ username });
+          resolve({
+            username,
+            avatar:
+              "https://gravatar.com/avatar/9da7a3b0aa8603d741759fc61e08c682?s=400&d=robohash&r=x",
+          });
         } else {
           reject({
             status: 401,

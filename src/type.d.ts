@@ -3,7 +3,9 @@ export type FieldType = {
   password?: string;
 };
 
-export type User = Pick<FieldType, "username">;
+export type User = Pick<FieldType, "username"> & {
+  avatar: string;
+};
 
 export type Message = {
   id: number;
@@ -40,4 +42,5 @@ export type GlobalState = {
   addChannel: (channel: Channel) => void;
   removeChannel: (id: number) => void;
   onSelected: (select: SelectedMessage) => void;
+  addMessage: (text: string) => void;
 };

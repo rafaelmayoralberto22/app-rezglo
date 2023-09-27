@@ -86,3 +86,7 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.border-gray {
+  border: 1px solid #bdbdbd;
+}

@@ -22,15 +22,20 @@ const ChatHistory = () => {
   }
 
   return (
-    <PerfectScrollbar options={{ suppressScrollX: true }} className="p-4">
-      <ul>
+    <PerfectScrollbar
+      options={{ suppressScrollX: true }}
+      className="p-4 w-full"
+    >
+      <ul className="w-full">
         {history.map((props) => (
           <li
             key={`messages-${props.id}-${props.timestamp}`}
             {...(user?.username === props.username
               ? {
                   style: {
-                    float: "right",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    width: "100%",
                   },
                 }
               : {})}
