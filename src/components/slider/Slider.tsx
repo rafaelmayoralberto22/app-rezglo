@@ -1,14 +1,17 @@
-import PerfectScrollbar from "react-perfect-scrollbar";
-import "react-perfect-scrollbar/dist/css/styles.css";
+import { Row } from "antd";
 import SliderChannels from "./SliderChannels";
 import SliderUsers from "./SliderUsers";
 
 const Slider = () => {
   return (
-    <PerfectScrollbar>
-      <SliderChannels />
-      <SliderUsers />
-    </PerfectScrollbar>
+    <div className="content">
+      <Row style={{ height: "50%" }}>
+        <SliderChannels />
+      </Row>
+      <Row style={{ height: "50%" }}>
+        <SliderUsers />
+      </Row>
+    </div>
   );
 };
 

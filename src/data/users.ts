@@ -2,6 +2,7 @@ import { ChannelUser } from "../type";
 
 export const mocksUsers: ChannelUser[] = [
   {
+    id: 1,
     username: "ygonzales",
     name: "Yaniel Gonzalez",
     history: [
@@ -24,6 +25,7 @@ export const mocksUsers: ChannelUser[] = [
     ],
   },
   {
+    id: 2,
     username: "rmayor",
     name: "Rafael Mayor Alberto",
     history: [
