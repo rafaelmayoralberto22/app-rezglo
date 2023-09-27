@@ -10,7 +10,7 @@ export const mocksUsers: ChannelUser[] = [
         id: 1,
         avatar:
           "https://gravatar.com/avatar/9da7a3b0aa8603d741759fc61e08c682?s=400&d=robohash&r=x",
-        timestamp: "1695777623315",
+        timestamp: 1695777623315,
         username: "ygonzales",
         message: "Hi",
       },
@@ -18,7 +18,7 @@ export const mocksUsers: ChannelUser[] = [
         id: 2,
         avatar:
           "https://gravatar.com/avatar/9da7a3b0aa8603d741759fc61e08c682?s=400&d=robohash&r=x",
-        timestamp: "1695777980897",
+        timestamp: 1695777980897,
         username: "admin",
         message: "Hi",
       },
@@ -33,7 +33,7 @@ export const mocksUsers: ChannelUser[] = [
         id: 1,
         avatar:
           "https://gravatar.com/avatar/9da7a3b0aa8603d741759fc61e08c682?s=400&d=robohash&r=x",
-        timestamp: "1695777623315",
+        timestamp: 1695777623315,
         username: "rmayor",
         message: "Hi",
       },
@@ -41,7 +41,7 @@ export const mocksUsers: ChannelUser[] = [
         id: 2,
         avatar:
           "https://gravatar.com/avatar/9da7a3b0aa8603d741759fc61e08c682?s=400&d=robohash&r=x",
-        timestamp: "1695777980897",
+        timestamp: 1695777980897,
         username: "admin",
         message: "Hi",
       },

@@ -9,8 +9,8 @@ export type Message = {
   id: number;
   avatar: string;
   username: string;
-  timestamp: string;
   message: string;
+  timestamp: number;
 };
 
 export type Channel = {

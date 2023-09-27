@@ -26,22 +26,23 @@ const List: FC<Props> = ({
     <PerfectScrollbar options={{ suppressScrollX: true }}>
       <ul className="px-2">
         {items.map(({ id, name }) => (
-          <Row
-            key={id}
-            align="middle"
-            style={{ height: 20 }}
-            className="hover-state mb-4"
-            onClick={() => onSelected({ id, type })}
-          >
-            {beforeIcon}
-            <span
-              className="collapse-text"
-              style={{ width: `calc(100% - ${afterIcon ? "60px" : "30px"})` }}
+          <li key={id}>
+            <Row
+              align="middle"
+              style={{ height: 20 }}
+              className="hover-state mb-4"
+              onClick={() => onSelected({ id, type })}
             >
-              {name}
-            </span>
-            <span onClick={() => onClickAfterIcon?.(id)}>{afterIcon}</span>
-          </Row>
+              {beforeIcon}
+              <span
+                className="collapse-text"
+                style={{ width: `calc(100% - ${afterIcon ? "60px" : "30px"})` }}
+              >
+                {name}
+              </span>
+              <span onClick={() => onClickAfterIcon?.(id)}>{afterIcon}</span>
+            </Row>
+          </li>
         ))}
       </ul>
     </PerfectScrollbar>

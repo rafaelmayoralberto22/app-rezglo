@@ -27,6 +27,7 @@ body {
 ul {
   padding-inline-start: 0;
   margin-block-start: 10px;
+  list-style: none;
 }
 
 /**Utils*/
@@ -52,6 +53,10 @@ ul {
 
 .px-2 {
   padding: 0 10px;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 /**Utils*/
 
