@@ -1,5 +1,9 @@
 const SliderChannels = () => {
-  return <></>;
+  return (
+    <>
+      
+    </>
+  );
 };
 
 export default SliderChannels;

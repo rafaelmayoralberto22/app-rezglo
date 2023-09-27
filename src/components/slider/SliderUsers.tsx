@@ -1,5 +1,9 @@
 const SliderUsers = () => {
-  return <></>;
+  return (
+    <>
+     
+    </>
+  );
 };
 
 export default SliderUsers;
