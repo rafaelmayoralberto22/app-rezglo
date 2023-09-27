@@ -12,5 +12,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  overflow: hidden;
+  background-image: url("../img/cream-paper.png");
 }
 
+body {
+  margin: 0;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
