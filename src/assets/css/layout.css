@@ -1,5 +1,5 @@
 .layout-content {
-  background-color: var(--bgColor);
+  background: var(--bgColor) !important;
   color: var(--fontColor);
 }
 
@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 0 50px;
-  box-shadow: 0 8px 2px -2px gray;
+  border-bottom: 1px solid #424242;
 }
 
 .footer {
@@ -15,4 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #424242;
+}
+
+.slider {
+  border-right: 1px solid #424242;
 }

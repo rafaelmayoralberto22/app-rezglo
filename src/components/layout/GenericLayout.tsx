@@ -16,7 +16,7 @@ const GenericLayout: FC<Props> = ({ sider, content }) => {
     <Layout style={{ height: "100vh" }}>
       <GenericHeader />
       <Layout hasSider>
-        <Sider className="layout-content">{sider}</Sider>
+        <Sider className="slider layout-content">{sider}</Sider>
         <Content className="layout-content">{content}</Content>
       </Layout>
       <GenericFooter />
