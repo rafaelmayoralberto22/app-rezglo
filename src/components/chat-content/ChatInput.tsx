@@ -1,6 +1,6 @@
 import { SendOutlined } from "@ant-design/icons";
 import { Input } from "antd";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, KeyboardEvent, useState } from "react";
 import { useStore } from "../../hooks/useGlobalStore";
 
 const ChatInput = () => {
@@ -18,6 +18,12 @@ const ChatInput = () => {
     setText(e.target.value);
   };
 
+  const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onAddMessage();
+    }
+  };
+
   return (
     <Input
       style={{
@@ -25,6 +31,7 @@ const ChatInput = () => {
       }}
       value={text}
       onChange={onChange}
+      onKeyDown={onKeyDown}
       addonAfter={
         <SendOutlined
           style={{ fontSize: "1.4rem", color: "#e0e0e0", cursor: "pointer" }}

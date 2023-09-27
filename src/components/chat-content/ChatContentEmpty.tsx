@@ -3,7 +3,11 @@ import { Row, Space } from "antd";
 
 const ChatContentEmpty = () => {
   return (
-    <Row justify="center" align="middle" style={{ height: "100%" }}>
+    <Row
+      justify="center"
+      align="middle"
+      style={{ height: "100%", width: "100%" }}
+    >
       <Space direction="vertical" align="center">
         <FolderOpenOutlined style={{ fontSize: "2rem" }} />
         <div>NO DATA</div>

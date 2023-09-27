@@ -26,7 +26,7 @@ const List: FC<Props> = ({
     <PerfectScrollbar options={{ suppressScrollX: true }}>
       <ul className="px-2">
         {items.map(({ id, name }) => (
-          <li key={id}>
+          <li key={`${type}-${id}-${name}`}>
             <Row
               align="middle"
               style={{ height: 20 }}

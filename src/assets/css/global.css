@@ -43,6 +43,10 @@ ul {
   margin-bottom: 1rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -108,7 +112,6 @@ ul {
   height: 40px;
   padding: 0 30px;
   margin-top: 10px;
-
 }
 
 .splash-content__container:before {

@@ -59,7 +59,7 @@ export const useStore = create<GlobalState>()(
       },
     }),
     {
-      name: "globalStore",
+      name: "rezglo-state",
       storage: createJSONStorage(() => sessionStorage),
     }
   )
