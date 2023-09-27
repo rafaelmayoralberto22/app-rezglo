@@ -1,0 +1,18 @@
+.layout-content {
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 50px;
+  box-shadow: 0 8px 2px -2px gray;
+}
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

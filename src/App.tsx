@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./assets/css/global.css";
+import ProtectedRoute from "./components/routes/ProtectedRoute";
 
 const Login = lazy(() => import("./pages"));
 const Dashboard = lazy(() => import("./pages/dashboard"));
@@ -14,7 +15,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/chat",
-    element: <Dashboard />,
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "*",

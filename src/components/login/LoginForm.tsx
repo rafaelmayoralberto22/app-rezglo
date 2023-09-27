@@ -1,18 +1,21 @@
 import { Button, Card, Form, Image, Input, Space, message } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useStore } from "../../hooks/useGlobalStore";
 import { api } from "../../services/api";
 import { FieldType } from "../../type";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"error" | "warning" | "">("");
+  const changeUser = useStore((store) => store.changeUser);
   const navigate = useNavigate();
 
   const onFinish = async (values: FieldType) => {
     try {
       setLoading(true);
-      await api.login(values);
+      const user = await api.login(values);
+      changeUser(user);
       navigate("/chat");
     } catch (e: any) {
       if (e.hasOwnProperty("message")) {

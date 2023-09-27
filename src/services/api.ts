@@ -1,7 +1,7 @@
-import { FieldType } from "../type";
+import { FieldType, User } from "../type";
 
 export const api = {
-  login: async ({ username, password }: FieldType) => {
+  login: async ({ username, password }: FieldType): Promise<User> => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (username === "admin" && password === "admin") {

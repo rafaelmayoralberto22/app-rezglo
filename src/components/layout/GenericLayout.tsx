@@ -1,7 +1,11 @@
 import { Layout } from "antd";
 import Sider from "antd/es/layout/Sider";
-import { Content, Footer, Header } from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
 import { FC } from "react";
+import GenericFooter from "./GenericFooter";
+import GenericHeader from "./GenericHeader";
+
+import "../../assets/css/layout.css";
 
 type Props = {
   sider: JSX.Element;
@@ -10,12 +14,12 @@ type Props = {
 const GenericLayout: FC<Props> = ({ sider, content }) => {
   return (
     <Layout style={{ height: "100vh" }}>
-      <Header>Header</Header>
+      <GenericHeader />
       <Layout hasSider>
-        <Sider>{sider}</Sider>
-        <Content>{content}</Content>
+        <Sider className="layout-content">{sider}</Sider>
+        <Content className="layout-content">{content}</Content>
       </Layout>
-      <Footer>Footer</Footer>
+      <GenericFooter />
     </Layout>
   );
 };
